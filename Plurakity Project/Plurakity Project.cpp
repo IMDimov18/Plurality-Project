@@ -22,30 +22,45 @@ float userInput()
     return *set2;
 }
 
-float unitingSets()
+void unitingSets()
 {
-    int n = sizeof(set1) / sizeof(set1[0]);
-    int m = sizeof(set2) / sizeof(set2[0]);
-    int k = n + m;
+    const int n = sizeof(set1) / sizeof(set1[0]);
+    const int m = sizeof(set2) / sizeof(set2[0]);
+    float set3[n + m];
+    for (int i = 0; i < m + n; i++)
+    {
+        if (i < m)
+        {
+            set3[i] = set1[i];
+        }
+        else
+        {
+            set3[i] = set2[i - m];
+        }
+    }
+    for (int i = 0; i < m + n; i++)
+    {
+        cout << set3[i] << " ";
+    }
 
 }
 
-float subsets()
+void subsets()
 {
 
 }
 
-float ownSubsets()
+void ownSubsets()
 {
 
 }
 
-float equivalentSubsets()
+void equivalentSubsets()
 {
 
 }
 
-float essentialSubsets()
+void essentialSubsets()
 {
 
 }
@@ -53,4 +68,5 @@ float essentialSubsets()
 int main()
 {
     userInput(); 
+    unitingSets();
 }
