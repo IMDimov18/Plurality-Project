@@ -47,26 +47,27 @@ void unitingSets()
 
 void subsets()
 {
-
-}
-
-void ownSubsets()
-{
-
-}
-
-void equivalentSubsets()
-{
-
-}
-
-void essentialSubsets()
-{
-
+    
+    if (sizeof(set1) > sizeof(set2))
+    {
+        int set3(sizeof(set2));
+        for (int i = 0; i < sizeof(set1); i++)
+        {
+            for (int j = 0; j < sizeof(set2); j++)
+            {
+                if (set1[i] == set2[j])
+                {
+                    set3[i] = set2[j];
+                }
+            }
+        }
+    }
 }
 
 int main()
 {
+    float set1[100];
+    float set2[100];
     userInput(); 
     unitingSets();
 }
