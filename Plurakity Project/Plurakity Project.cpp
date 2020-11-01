@@ -94,17 +94,97 @@ void subsets()
 
 void section()
 {
-
+    int count = 0, i = 0;
+    int* ptr = &count;
+    int* ptr1 = &i;
+    if (sizeof(set1) > sizeof(set2))
+    {
+        int set3(sizeof(set2));
+        for (int i = 0; i < sizeof(set1); i++)
+        {
+            for (int j = 0; j < sizeof(set2); j++)
+            {
+                if (set1[i] == set2[j])
+                {
+                    set3[ptr++] = set2[j];
+                }
+            }
+        }
+        for (i = 0; i < count; i++)
+        {
+            cout << set3[ptr] << " ";
+        }
+    }
+    else
+    {
+        int set3(sizeof(set2));
+        for (int i = 0; i < sizeof(set2); i++)
+        {
+            for (int j = 0; j < sizeof(set1); j++)
+            {
+                if (set2[i] == set1[j])
+                {
+                    set3[ptr++] = set1[j];
+                }
+            }
+        }
+        for (int i = 0; i < count; i++)
+        {
+            cout << set3[ptr] << " ";
+        }
+    }
 }
 
 void distinction()
 {
-
+    int count = 0, i = 0;
+    int* ptr = &count;
+    int* ptr1 = &i;
+    if (sizeof(set1) > sizeof(set2))
+    {
+        int set3(sizeof(set2));
+        for (int i = 0; i < sizeof(set1); i++)
+        {
+            for (int j = 0; j < sizeof(set2); j++)
+            {
+                if (set1[i] == set2[j])
+                {
+                    break;
+                }
+                set3[ptr++] = set1[i];
+               
+            }
+        }
+        for (i = 0; i < count; i++)
+        {
+            cout << set3[ptr] << " ";
+        }
+    }
+    else
+    {
+        int set3(sizeof(set2));
+        for (int i = 0; i < sizeof(set2); i++)
+        {
+            for (int j = 0; j < sizeof(set1); j++)
+            {
+                if (set1[i] == set2[j])
+                {
+                    break;
+                }
+                set3[ptr++] = set2[i];
+            }
+        }
+        for (int i = 0; i < count; i++)
+        {
+            cout << set3[ptr] << " ";
+        }
+    }
 }
 
 int main()
 {
-    userInput();
-    subsets();
+    int choice=0;
+
+   
  
 }
