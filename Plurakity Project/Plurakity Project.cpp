@@ -30,7 +30,7 @@ float userInput()
     return *set2;
   
 }
-
+//unite two sets
 void unitingSets()
 {
     const int n = sizeof(set1) / sizeof(set1[0]);
@@ -56,7 +56,7 @@ void unitingSets()
     }
 
 }
-
+//make subset of a set
 void subsets()
 {
     int count = 0, i = 0;
@@ -105,7 +105,7 @@ void subsets()
         }
     }
 }
-
+//make the section out of two sets
 void section()
 {
     int count = 0, i = 0;
@@ -153,7 +153,7 @@ void section()
         }
     }
 }
-
+//make distinction of two sets
 void distinction()
 {
     int count = 0, i = 0;
@@ -206,7 +206,7 @@ void distinction()
         }
     }
 }
-
+//checking for wrong choice input
 bool checkForWrongInput(int n)
 {
     while (1)
@@ -225,7 +225,7 @@ bool checkForWrongInput(int n)
     }
     return 1;
 }
-
+//the main menu
 bool mainMenu()
 {
     cout << "Welcome to our Sets Project" << endl;
