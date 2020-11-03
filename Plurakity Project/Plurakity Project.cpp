@@ -8,14 +8,19 @@ int n1 = 0;
 
 float userInput()
 {
+    cout << "Please enter the length of the first set: " << endl;
     cin >> n;
+    cout << "Please enter the length of the second set: " << endl;
     cin >> n1;
+    cout << "Please enter the values for the first set: " << endl;
 
     for (int i = 0; i < n; i++)
     {
         cin >> set1[i];
     }
 
+    cout << "Please enter the values for the second set: " << endl;
+    
     for (int i = 0; i < n1; i++)
     {
         cin >> set2[i];
@@ -23,7 +28,7 @@ float userInput()
     
     return *set1;
     return *set2;
-    return 1;
+  
 }
 
 void unitingSets()
@@ -44,7 +49,7 @@ void unitingSets()
             set3[i] = set2[i - m];
         }
     }
-
+    cout << "This are the two united sets: " << endl;
     for (int i = 0; i < m + n; i++)
     {
         cout << set3[i] << " ";
@@ -274,6 +279,7 @@ bool mainMenu()
     case 9:
         return 0;
     }
+    return 1;
 }
 
 int main()
